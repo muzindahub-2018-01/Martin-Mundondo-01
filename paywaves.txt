@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="style css" rel="stylesheet">
+<style>
+    .header{
+          color:black;
+          text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<header>
+     <h1>PAYWAVES(Pvt)Ltd</h1>
+</header>
+
+<nav>
+   <ul>
+     <li><a href="#">About Us</a></li>
+     <li><a href="#">Our Services</a></li>
+     <li><a href="#">Contact Us</a></li>
+   </ul>
+<?nav>
+
+<h1>About Us</h1>
+<p>Paywaves (Pvt)Ltd is a full service digital agency based in Harare, Zimbabwe and whose focus areas are web, mobile applications and desktop applications development.
+   From the inception of an idea through delivery of the final product, we have the experience, creativity and technical know-how for every project we work on.</p>
+<br>
+<h1>Our Vision</h1>
+<p>To be the most sought-after digital agency in Zimbabwe</p>
+<br>
+<h1>Our Beliefs</h1>
+
+<nav>
+   <ul>
+     <li><a href="#">Customer Care</a></li>
+     <li><a href="#">Paperless Communication</a></li>
+     <li><a href="#">Digital Innovation</a.</li>
+   </ul>
+</nav>
+<br>
+<br>
+<?php
+$name='Martin';
+$pay='Paywves development team is led by "$name .", a fulltime and experienced web developer.';
+echo $pay;
+
+<footer>copyright@paywaves.com</footer>
+
+</body>
+</html>
+
+ 
+
