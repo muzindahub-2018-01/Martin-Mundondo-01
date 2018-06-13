@@ -45,7 +45,7 @@
 <br>
 <?php
 $name='Martin';
-$pay='Paywves development team is led by "$name .", a fulltime and experienced web developer.';
+$pay='Paywaves development team is led by "$name .", a fulltime and experienced web developer.';
 echo $pay;
 
 <footer>copyright@paywaves.com</footer>
