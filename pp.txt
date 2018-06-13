@@ -82,6 +82,7 @@ return $data;
 FirstName:<input type="text" name="FirstName" value="<?php echo $FirstName;?>">
 <span class="error">*<?php echo $FirstNameErr;?></span>
 <br><br>
+Email:
 
 
 
