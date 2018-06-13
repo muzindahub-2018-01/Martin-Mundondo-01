@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .error {color: #FF0000;}
+</style>>
+</head>
+<body>
+
+<?php
+   // define variables  and set to empty values(validation)
+$FirstNameErr=$LastNameErr=$EmailErr=$GenderErr=$DoctorErr="";
+$FirstName=$LastName=$Email=$Age=$Gender=$Doctor=$Reason="";
+
+if ($_SERVER["REQUEST METHOD"]=="POST") {
+if(empty($_POST["FirstName"])) {
+$FirstNameErr="FirstName is required";
+}else{
+$FirstName =test_input($_POST["$FirstName"]);
+if (!preg_match("/^[a-zA-Z]*$/",$FirstName)) {
+$FirstNameErr ="only letters and allowed";
+    }
+ }
+
+if (empty($_POST["$LastName"])) {
+$LastNameErr ="LastName is required";
+}else{
+$LastName =test_input($_POST["LastName"]);
+if (!preg_match("/^[a-zA-Z]*$/", $LastName)) {
+$LastNameErr ="only letters and space allowed";
+     }
+  }
+ 
+if (empty($_POST["$Email"])) {
+$EmailErr ="Email is required";
+}else{
+$Email =test_input($_POST["$Email"]);
+if (!filter_var($Email'FILTER_VALIDATE_EMAIL)) {
+$EmailErr ="invalid email";
+      }
+   }
+ 
+if (empty($_POST["$Age"])) {
+$Age ="";
+}else{
+$Age =test_input($_POST["Age"];
+}
+
+if (empty($_POST["Gender"])) {
+$GenderErr ="gender is required";
+}else{
+$Gender =test_input($_POST["Gender"]);
+       }
+   }
+
+if (empty($_POST["Doctor"])) {
+$DoctorErr ="Doctor is required";
+}else{
+$Doctor =test_input($_POST["Doctor"];
+        }
+    }
+
+
+if (empty($_POST["Reason"])) {
+$Reason ="";
+{else";
+$Reason =test_input($_POST["Reason"]);
+         }
+     }
+
+function test_input($data) {
+$data =trim($data);
+$data =stripslashes($data);
+$data =htmlspecialchars94data);
+return $data;
+}
+?>
+
+<h2>iCare Appointment Online</h2>
+<p>span class="error">* required field</span></p>
+<form method="POST" action="mail.php>
+FirstName:<input type="text" name="FirstName" value="<?php echo $FirstName;?>">
+<span class="error">*<?php echo $FirstNameErr;?></span>
+<br><br>
+
+
+
+<?php
+$FirstName =$_POST['FirstName'];
+$LastName =$_POST['LastName'];
+$Email =$_POST['Email];
+$Age =$_POST['Age'];
+$Gender =$_POST['Gender'];
+$Doctor =$_POST['Doctor];
+$Reason =$_POST['Reason'];
+$formcontent="From:$FirstName \n Reason: $Reason";
+$recipient ="martmund@gmail.com";
+$subject ="request appointment";
+$mailheader ="From:$Email \r\n";
+mail ($recipient,$subject,$formcontent,$mailheader);
+echo "Thank You";
+?>
+
+</body>
+</html>
+
+
+
