@@ -88,7 +88,7 @@ LastName: <input type="text" name="LastName" value="<?php echo $LastName;?>">
 Email: <input type="text" name="Email" value="<?php echo $Email;?>">
 <span class="error">*<?php echo $Email;?> </span>
 <br><br>
-Age: <input type=text name="Age" value="<?php echo $Age;?>">
+Age: <input type="text" name="Age" value="<?php echo $Age;?>">
 <br><br>
 Gender: 
 	<input type="radio" name="Gender" <?php if (isset($Gender) &&
