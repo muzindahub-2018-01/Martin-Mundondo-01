@@ -103,6 +103,7 @@ Doctor: <input type="text" name="Doctor" value="<?php echo $Doctor;?>">
 Reason: <textarea name="Reason" rows="5" cols="50"> <?php echo 
 	$Reason;?> </textarea>
 <br><br>
+<input type="SUBMIT" name="SUBMIT" value="SUBMIT">
 </form>
 
 <?php
