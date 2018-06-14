@@ -105,8 +105,6 @@ Reason: <textarea name="Reason" rows="5" cols="50"> <?php echo
 <br><br>
 </form>
 
-
-
 <?php
 $FirstName =$_POST['FirstName'];
 $LastName =$_POST['LastName'];
